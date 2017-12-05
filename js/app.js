@@ -1,11 +1,9 @@
 //global variables
-var cardParent = document.getElementById('card_parent');
-var form = document.getElementById('form');
-// var listContainer = document.createElement('div');
+var listContainer = document.createElement('div');
 var toDo = document.createElement('textarea');
 var addToDo = document.createElement('a');
 //attributes
-// listContainer.className = 'wrapper';
+listContainer.className = 'wrapper';
 
 //events
 document.getElementById('title_list').addEventListener('click',showButtons);
@@ -15,6 +13,7 @@ document.getElementById('button1').addEventListener('click',addNewList);
 
 //functions
 function showButtons(event) {
+  event.preventDefault();
   document.getElementById('button1').style.display = 'block';
   document.getElementById('button2').style.display = 'block';
 }
@@ -29,14 +28,10 @@ function addNewList(event) {
   // prevent input to onload the page
   event.preventDefault();
   //Taking value from input
-  var listContainer = document.createElement('div');
-  listContainer.className = 'wrapper';
   var titleList = document.getElementById('title_list').value;
   //creating elements for toDoList
   var containerToDoes = document.getElementById('container-to-do');
-  //var listContainer = document.createElement('div');
   var title = document.createElement('h5');
-  //var addToDo = document.getElementById('add_card');
   //locating elements newLists
   containerToDoes.appendChild(listContainer);
   listContainer.appendChild(title);
@@ -80,4 +75,3 @@ function createCard() {
   //set attibutes
   pNewList.className = 'show-activity';
 }
-
