@@ -45,13 +45,15 @@ function addNewList(event) {
  addToDo.onclick = showTextArea;
  function showTextArea() {
    // Creating Variables
-   var add = document.createElement('button');
+   var add = document.createElement('p');
    var close = document.createElement('button');
    // Assigning attributes
    toDo.className = 'textarea';
    add.innerHTML = 'Add';
    close.innerText = 'X';
    add.type = 'submit';
+   add.className = 'button1';
+   close.className = 'button2';
    addToDo.style.display = 'none';
    //locating elements
    listContainer.appendChild(toDo);
